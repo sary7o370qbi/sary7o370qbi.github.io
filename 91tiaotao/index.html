@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>91挑桃-挑桃吃瓜热点爆料_黑料大赛热门内容</title>
+<meta name="description" content="91挑桃是吃瓜热点内容聚合页，围绕挑桃吃瓜、黑料大赛与爆料热点，集中呈现近期热门条目、话题脉络与内容入口，帮助访问者快速找到想看的热点内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23f4a3b5'/%3E%3Cpath d='M32 20c6 0 10 5 10 11s-4 12-10 12-10-6-10-12 4-11 10-11z' fill='%23fff3f5'/%3E%3Cpath d='M32 12c3 0 6 3 6 6-3 0-6-2-6-6z' fill='%236aa26a'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#2a2024;
+    --ink-soft:#5c4a51;
+    --peach:#f4a3b5;
+    --peach-deep:#e0708c;
+    --peach-soft:#fdeef1;
+    --cream:#fffaf8;
+    --line:#f0dde2;
+    --green:#5d8a5d;
+    --shadow:0 10px 30px rgba(224,112,140,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{width:min(1120px,92vw);margin:0 auto;}
+
+  /* 页头 */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,250,248,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .head-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:18px;padding:14px 0;flex-wrap:wrap;
+  }
+  .logo{display:flex;align-items:center;gap:10px;}
+  .logo svg{width:38px;height:38px;flex:none;}
+  .logo .brand{
+    font-size:1.28rem;font-weight:800;letter-spacing:.5px;
+    color:var(--ink);white-space:nowrap;
+  }
+  nav.main{display:flex;gap:6px;flex-wrap:wrap;}
+  nav.main a{
+    font-size:.92rem;color:var(--ink-soft);
+    padding:7px 13px;border-radius:999px;transition:.2s;
+  }
+  nav.main a:hover{background:var(--peach-soft);color:var(--peach-deep);}
+  .head-cta{
+    background:var(--peach-deep);color:#fff;font-size:.9rem;font-weight:600;
+    padding:9px 20px;border-radius:999px;transition:.2s;white-space:nowrap;
+  }
+  .head-cta:hover{background:#c95a78;}
+
+  /* 首屏 */
+  .hero{
+    position:relative;
+    padding:64px 0 56px;
+    background:
+      radial-gradient(680px 320px at 88% 6%, rgba(244,163,181,.35), transparent 70%),
+      radial-gradient(520px 300px at 4% 96%, rgba(93,138,93,.14), transparent 70%),
+      var(--cream);
+    overflow:hidden;
+  }
+  .hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;}
+  .hero .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.82rem;font-weight:600;color:var(--peach-deep);
+    background:#fff;border:1px solid var(--line);
+    padding:6px 14px;border-radius:999px;margin-bottom:20px;
+    box-shadow:var(--shadow);
+  }
+  .kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--peach-deep);}
+  h1{
+    font-size:clamp(2.3rem,5vw,3.4rem);
+    font-weight:900;letter-spacing:2px;line-height:1.15;
+    color:var(--ink);
+    margin-bottom:18px;
+  }
+  h1 .accent{color:var(--peach-deep);}
+  .hero p.lead{
+    font-size:1.03rem;color:var(--ink-soft);max-width:34em;margin-bottom:26px;
+  }
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+  .btn-primary{
+    background:var(--peach-deep);color:#fff;font-weight:600;
+    padding:13px 28px;border-radius:12px;transition:.2s;
+    box-shadow:0 8px 20px rgba(224,112,140,.3);
+  }
+  .btn-primary:hover{background:#c95a78;transform:translateY(-1px);}
+  .btn-ghost{
+    background:#fff;color:var(--ink);font-weight:600;
+    padding:13px 26px;border-radius:12px;border:1px solid var(--line);transition:.2s;
+  }
+  .btn-ghost:hover{border-color:var(--peach);color:var(--peach-deep);}
+  .hero-stats{display:flex;gap:30px;flex-wrap:wrap;border-top:1px dashed var(--line);padding-top:20px;}
+  .hero-stats div strong{display:block;font-size:1.35rem;color:var(--peach-deep);font-weight:800;}
+  .hero-stats div span{font-size:.82rem;color:var(--ink-soft);}
+
+  .hero-art{
+    position:relative;background:#fff;border-radius:26px;
+    padding:26px;box-shadow:var(--shadow);border:1px solid var(--line);
+  }
+  .hero-art .art-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+  .art-top .tag{font-size:.78rem;font-weight:700;color:var(--green);background:#eef6ee;padding:4px 12px;border-radius:999px;}
+  .art-top .time{font-size:.76rem;color:#a08c93;}
+  .hero-art h2{font-size:1.05rem;margin-bottom:8px;font-weight:800;}
+  .hero-art p{font-size:.88rem;color:var(--ink-soft);margin-bottom:16px;}
+  .mini-list{display:flex;flex-direction:column;gap:9px;}
+  .mini-list a{
+    display:flex;align-items:center;gap:10px;font-size:.88rem;
+    padding:9px 12px;border-radius:10px;background:var(--peach-soft);color:var(--ink);
+    transition:.2s;
+  }
+  .mini-list a:hover{background:#fbe0e6;}
+  .mini-list .idx{
+    width:20px;height:20px;flex:none;border-radius:6px;background:var(--peach-deep);
+    color:#fff;font-size:.72rem;font-weight:700;display:grid;place-items:center;
+  }
+
+  /* 通用分区 */
+  section{padding:60px 0;}
+  section.alt{background:#fff;}
+  .sec-head{margin-bottom:34px;}
+  .sec-head .eyebrow{
+    font-size:.8rem;font-weight:700;color:var(--peach-deep);
+    letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;
+  }
+  .sec-head h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:900;letter-spacing:1px;}
+  .sec-head p{color:var(--ink-soft);font-size:.95rem;margin-top:10px;max-width:44em;}
+
+  /* 热点卡片 */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:18px;
+    padding:24px;display:flex;flex-direction:column;gap:12px;transition:.25s;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--peach);}
+  .card .badge{
+    align-self:flex-start;font-size:.74rem;font-weight:700;
+    padding:3px 11px;border-radius:999px;background:var(--peach-soft);color:var(--peach-deep);
+  }
+  .card .badge.green{background:#eef6ee;color:var(--green);}
+  .card h3{font-size:1.05rem;font-weight:800;line-height:1.5;}
+  .card p{font-size:.88rem;color:var(--ink-soft);flex:1;}
+  .card .meta{font-size:.78rem;color:#a08c93;display:flex;gap:14px;flex-wrap:wrap;}
+
+  /* 内容条目列表 */
+  .feed{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .feed-item{
+    display:flex;gap:16px;background:#fff;border:1px solid var(--line);
+    border-radius:16px;padding:18px;transition:.2s;
+  }
+  .feed-item:hover{border-color:var(--peach);box-shadow:var(--shadow);}
+  .feed-item .num{
+    flex:none;width:42px;height:42px;border-radius:12px;
+    background:var(--peach-soft);color:var(--peach-deep);
+    font-weight:900;font-size:1.05rem;display:grid;place-items:center;
+  }
+  .feed-item h3{font-size:.98rem;font-weight:800;margin-bottom:5px;}
+  .feed-item p{font-size:.85rem;color:var(--ink-soft);}
+  .feed-item .src{font-size:.75rem;color:#a08c93;margin-top:7px;}
+
+  /* 正文段落区 */
+  .prose{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+  .prose .block h3{
+    font-size:1.12rem;font-weight:800;margin-bottom:12px;
+    padding-left:12px;border-left:4px solid var(--peach-deep);
+  }
+  .prose .block p{font-size:.94rem;color:var(--ink-soft);margin-bottom:14px;}
+  .prose .block p strong{color:var(--ink);}
+
+  /* 入口 / 下载 */
+  .entry-box{
+    background:linear-gradient(135deg,#fff3f5,#fdeef1);
+    border:1px solid var(--line);border-radius:24px;
+    padding:40px;display:grid;grid-template-columns:1.4fr .6fr;gap:28px;align-items:center;
+  }
+  .entry-box h2{font-size:1.5rem;font-weight:900;margin-bottom:10px;}
+  .entry-box p{font-size:.94rem;color:var(--ink-soft);margin-bottom:20px;}
+  .entry-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+  .btn-download{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--ink);color:#fff;font-weight:600;
+    padding:13px 28px;border-radius:12px;
+    pointer-events:none;opacity:.92;
+  }
+  .entry-visual{display:grid;place-items:center;}
+
+  /* 页尾 */
+  footer.site{
+    background:#2a2024;color:#d9c9ce;padding:46px 0 26px;font-size:.88rem;
+  }
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;margin-bottom:30px;}
+  footer .brand-line{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+  footer .brand-line svg{width:32px;height:32px;}
+  footer .brand-line .brand{color:#fff;font-weight:800;font-size:1.12rem;}
+  footer p{color:#b6a2a9;line-height:1.8;font-size:.84rem;}
+  footer h4{color:#fff;font-size:.92rem;font-weight:700;margin-bottom:12px;}
+  footer ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+  footer ul a{color:#b6a2a9;font-size:.84rem;transition:.2s;}
+  footer ul a:hover{color:var(--peach);}
+  .foot-bottom{
+    border-top:1px solid #40333a;padding-top:18px;
+    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    color:#8f7c83;font-size:.78rem;
+  }
+
+  /* 响应式 */
+  @media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr;gap:34px;}
+    .hero-art{order:2;}
+    .cards{grid-template-columns:repeat(2,1fr);}
+    .feed{grid-template-columns:1fr;}
+    .prose{grid-template-columns:1fr;gap:26px;}
+    .entry-box{grid-template-columns:1fr;padding:30px;}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:600px){
+    .head-inner{padding:12px 0;gap:10px;}
+    nav.main{order:3;width:100%;justify-content:flex-start;}
+    .head-cta{font-size:.82rem;padding:8px 16px;}
+    .hero{padding:40px 0 36px;}
+    h1{letter-spacing:1px;}
+    .hero-stats{gap:20px;}
+    .cards{grid-template-columns:1fr;}
+    section{padding:44px 0;}
+    .entry-box{padding:24px;}
+    .foot-grid{grid-template-columns:1fr;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap head-inner">
+    <a class="logo" href="#top" aria-label="91挑桃 首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" fill="#f4a3b5"/>
+        <path d="M32 20c6.5 0 10.5 5.2 10.5 11.4S38.5 44 32 44s-10.5-6.4-10.5-12.6S25.5 20 32 20z" fill="#fff3f5"/>
+        <path d="M32 11c3.4 0 6.4 3 6.4 6.4-3.4 0-6.4-2.8-6.4-6.4z" fill="#5d8a5d"/>
+        <path d="M31 34.5c1.6-2.6 3.2-3.6 5.4-4.4" stroke="#f4a3b5" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="brand">91挑桃</span>
+    </a>
+    <nav class="main" aria-label="主导航">
+      <a href="#hot">热门条目</a>
+      <a href="#feed">爆料清单</a>
+      <a href="#read">吃瓜脉络</a>
+      <a href="#entry">内容入口</a>
+    </nav>
+    <a class="head-cta" href="#hot">看今日热点</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <span class="kicker"><span class="dot"></span>吃瓜热点内容聚合</span>
+        <h1>91挑桃</h1>
+        <p class="lead">91挑桃把近期流传的挑桃吃瓜、黑料大赛与爆料热点收在一处，按话题整理出条目、来龙去脉和可追的入口。想快速知道大家在聊什么，从这里开始翻。</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#hot">浏览热门条目</a>
+          <a class="btn-ghost" href="#read">先看话题脉络</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>6</strong><span>本期精选条目</span></div>
+          <div><strong>4</strong><span>话题脉络板块</span></div>
+          <div><strong>每日</strong><span>热点更新节奏</span></div>
+        </div>
+      </div>
+
+      <aside class="hero-art" aria-label="91挑桃 快捷热点">
+        <div class="art-top">
+          <span class="tag">本期焦点</span>
+          <span class="time">内容随热点滚动</span>
+        </div>
+        <h2>大家都在翻的几条</h2>
+        <p>91挑桃按热度与讨论密度挑选条目，先给结论，再补细节。</p>
+        <div class="mini-list">
+          <a href="#hot"><span class="idx">1</span>黑料大赛新一轮爆料焦点</a>
+          <a href="#hot"><span class="idx">2</span>挑桃吃瓜里被反复提到的名字</a>
+          <a href="#feed"><span class="idx">3</span>热度升得最快的三条</a>
+          <a href="#read"><span class="idx">4</span>旧瓜回炉与新瓜叠加</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 热门条目 -->
+  <section id="hot" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Hot Picks</div>
+        <h2>91挑桃热门条目</h2>
+        <p>这一栏只放讨论量靠前的条目。每条给出核心争议点、涉及范围与可继续追的方向，方便你在91挑桃里按兴趣往下翻。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="badge">爆料热点</span>
+          <h3>黑料大赛话题集中爆发</h3>
+          <p>多段材料在同一时间段被放出，讨论从单点转向对整体脉络的梳理。91挑桃把时间顺序与关键节点并列，便于对照判断。</p>
+          <div class="meta"><span>讨论密度：高</span><span>条目性质：话题梳理</span></div>
+        </article>
+        <article class="card">
+          <span class="badge green">吃瓜线索</span>
+          <h3>挑桃吃瓜里的旧料新解</h3>
+          <p>早前被忽略的片段在新材料出现后被重新解读。这类内容在91挑桃里单独归类，避免与刚发生的爆料混在一起。</p>
+          <div class="meta"><span>讨论密度：中高</span><span>条目性质：回溯对照</span></div>
+        </article>
+        <article class="card">
+          <span class="badge">人物向</span>
+          <h3>被反复提及的当事人</h3>
+          <p>同一名字在不同条目里多次出现，关联关系成为讨论重点。91挑桃只整理公开流传的说法，并标注来源与出现时间。</p>
+          <div class="meta"><span>讨论密度：中</span><span>条目性质：关系梳理</span></div>
+        </article>
+        <article class="card">
+          <span class="badge green">观点区</span>
+          <h3>两派说法各执一词</h3>
+          <p>围绕同一事件，流传着方向相反的两套叙述。页面并列呈现两种说法的要点，读者可自行对照，不必先接受单一版本。</p>
+          <div class="meta"><span>讨论密度：高</span><span>条目性质：观点并列</span></div>
+        </article>
+        <article class="card">
+          <span class="badge">节奏观察</span>
+          <h3>爆料放出节奏的变化</h3>
+          <p>材料从零散投放到集中释出，讨论热度随之起伏。91挑桃记录这一变化过程，帮助判断后续还有没有新内容。</p>
+          <div class="meta"><span>讨论密度：中</span><span>条目性质：过程记录</span></div>
+        </article>
+        <article class="card">
+          <span class="badge green">边界提醒</span>
+          <h3>看瓜也要留个心眼</h3>
+          <p>部分材料来源不明、真伪难辨。91挑桃在条目旁标注可信度提示，提醒读者区分已确认信息与未经核实的说法。</p>
+          <div class="meta"><span>讨论密度：—</span><span>条目性质：阅读提示</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 爆料清单 -->
+  <section id="feed">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Feed</div>
+        <h2>91挑桃爆料清单</h2>
+        <p>按出现时间排列的条目清单，每条一句话说清重点。清单是翻页的起点，点开后再看完整脉络。</p>
+      </div>
+      <div class="feed">
+        <div class="feed-item">
+          <div class="num">01</div>
+          <div>
+            <h3>新材料集中释出</h3>
+            <p>同一话题下出现多段材料，讨论重心从“有没有”转向“怎么解读”。</p>
+            <div class="src">来源：公开流传内容 · 条目形式：时间线</div>
+          </div>
+        </div>
+        <div class="feed-item">
+          <div class="num">02</div>
+          <div>
+            <h3>当事人回应被转述</h3>
+            <p>相关回应以转述形式扩散，原话与转述之间存在出入，需对照原文。</p>
+            <div class="src">来源：公开转述 · 条目形式：对照说明</div>
+          </div>
+        </div>
+        <div class="feed-item">
+          <div class="num">03</div>
+          <div>
+            <h3>旧话题被重新提起</h3>
+            <p>数年前的片段因新事件被翻出，与当下讨论形成交叉引用。</p>
+            <div class="src">来源：历史内容 · 条目形式：回溯</div>
+          </div>
+        </div>
+        <div class="feed-item">
+          <div class="num">04</div>
+          <div>
+            <h3>黑料大赛讨论外溢</h3>
+            <p>话题从单一平台扩散到多个讨论区，出现不同版本的总结帖。</p>
+            <div class="src">来源：多平台讨论 · 条目形式：汇总</div>
+          </div>
+        </div>
+        <div class="feed-item">
+          <div class="num">05</div>
+          <div>
+            <h3>关键节点时间被校正</h3>
+            <p>早前流传的时间点存在偏差，后续材料给出更完整的顺序。</p>
+            <div class="src">来源：后续材料 · 条目形式：校正</div>
+          </div>
+        </div>
+        <div class="feed-item">
+          <div class="num">06</div>
+          <div>
+            <h3>热度回落后的余波</h3>
+            <p>讨论峰值过后仍有零星补充，91挑桃保留这部分作为后续观察。</p>
+            <div class="src">来源：持续更新 · 条目形式：补充</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 吃瓜脉络 -->
+  <section id="read" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Context</div>
+        <h2>91挑桃吃瓜脉络</h2>
+        <p>热点条目单看容易断章，这里把常见疑问拆成四块，讲清91挑桃的内容怎么组织、材料从哪来、该怎么读。</p>
+      </div>
+      <div class="prose">
+        <div class="block">
+          <h3>内容是怎么挑出来的</h3>
+          <p>91挑桃不追求把每条传闻都收进来，而是优先选择讨论集中、材料相对完整的条目。挑选时看三个点：是否有多方提及、是否有可对照的材料、讨论是否还在持续。</p>
+          <p>因此页面上的条目数量不会很多，但每条都尽量给出可追的起点。热度回落后的内容仍会保留一段时间，方便后来的人补课。</p>
+        </div>
+        <div class="block">
+          <h3>材料来源与确定程度</h3>
+          <p>页面呈现的内容以公开流传的说法为主，包括转述、总结帖和片段材料。对于来源不明或只有单一出处的说法，91挑桃会在条目里标明，不与多方印证的内容混排。</p>
+          <p>已确认的信息、当事人原话与网友推测分属不同层级，阅读时请按标注区分，不要把所有内容当成同一确定程度的事实。</p>
+        </div>
+        <div class="block">
+          <h3>黑料大赛类话题怎么读</h3>
+          <p>这类话题往往材料密集、版本众多，先看时间顺序比先看结论更有用。91挑桃把关键节点按先后排列，再标注每个节点的材料出处，减少来回翻找。</p>
+          <p>遇到两套相反说法时，页面并列呈现而不是替读者下判断。哪一版更接近事实，需要结合后续材料再看。</p>
+        </div>
+        <div class="block">
+          <h3>挑桃吃瓜的阅读节奏</h3>
+          <p>建议先看清单了解全貌，再进热门条目挑感兴趣的深入。一次看完所有细节意义不大，热点本身还在变化，隔天回来看更新更有效。</p>
+          <p>91挑桃适合当作入口而非终点：看到有兴趣的条目，顺着标注的来源继续找，比只停留在总结层面更有收获。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 内容入口 -->
+  <section id="entry">
+    <div class="wrap">
+      <div class="entry-box">
+        <div>
+          <h2>进入91挑桃的内容入口</h2>
+          <p>从热门条目看结论，从爆料清单看顺序，从吃瓜脉络看背景。三个入口对应三种阅读需求，按你现在的状态选一个开始。</p>
+          <div class="entry-actions">
+            <a class="btn-primary" href="#hot">打开热门条目</a>
+            <a class="btn-ghost" href="#feed">查看爆料清单</a>
+            <a class="btn-download" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M4 21h16"/></svg>
+              下载
+            </a>
+          </div>
+        </div>
+        <div class="entry-visual" aria-hidden="true">
+          <svg viewBox="0 0 200 160" width="200" height="160">
+            <rect x="14" y="20" width="172" height="112" rx="16" fill="#fff" stroke="#f0dde2" stroke-width="2"/>
+            <circle cx="54" cy="58" r="16" fill="#f4a3b5"/>
+            <path d="M54 40c3.4 0 6 2.8 6 6.2-3.4 0-6-2.6-6-6.2z" fill="#5d8a5d"/>
+            <rect x="84" y="46" width="80" height="9" rx="4.5" fill="#f0dde2"/>
+            <rect x="84" y="63" width="56" height="8" rx="4" fill="#f8e6ea"/>
+            <rect x="30" y="92" width="134" height="8" rx="4" fill="#f8e6ea"/>
+            <rect x="30" y="108" width="96" height="8" rx="4" fill="#f0dde2"/>
+            <circle cx="168" cy="140" r="14" fill="#fdeef1"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand-line">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="30" fill="#f4a3b5"/>
+            <path d="M32 20c6.5 0 10.5 5.2 10.5 11.4S38.5 44 32 44s-10.5-6.4-10.5-12.6S25.5 20 32 20z" fill="#fff3f5"/>
+            <path d="M32 11c3.4 0 6.4 3 6.4 6.4-3.4 0-6.4-2.8-6.4-6.4z" fill="#5d8a5d"/>
+          </svg>
+          <span class="brand">91挑桃</span>
+        </div>
+        <p>91挑桃是吃瓜热点内容的聚合入口，围绕挑桃吃瓜、黑料大赛与爆料热点整理条目、清单与脉络，所有内容以公开流传说法为基础，具体结论请以标注来源为准。</p>
+      </div>
+      <div>
+        <h4>页面导航</h4>
+        <ul>
+          <li><a href="#hot">热门条目</a></li>
+          <li><a href="#feed">爆料清单</a></li>
+          <li><a href="#read">吃瓜脉络</a></li>
+          <li><a href="#entry">内容入口</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>阅读提示</h4>
+        <ul>
+          <li><a href="#read">材料来源说明</a></li>
+          <li><a href="#read">确定程度区分</a></li>
+          <li><a href="#read">话题更新节奏</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>91挑桃 · 吃瓜热点内容聚合</span>
+      <span>页面内容仅为话题整理，不构成对任何说法的事实认定</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
